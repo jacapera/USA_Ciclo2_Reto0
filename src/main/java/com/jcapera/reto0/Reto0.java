@@ -11,21 +11,21 @@ import java.util.Scanner;
  * Entrada 0 0 / Salida 0.0 0.0
  * @author jesus capera
  */
-public class Main {
+public class Reto0 {
     public static void main(String[] args){
         
         Scanner sc = new Scanner(System.in);
-        // captura de datos por pantalla en una unica linea
+        // captura de datos por pantalla en una sola linea separado por un espacio
         String ingresoDatos = sc.nextLine();
         
         String[] datosNumericos = ingresoDatos.split(" ");
-        double num1 = Double.parseDouble(datosNumericos[0]);
-        double num2 = Double.parseDouble(datosNumericos[1]);
+        float num1 = Float.parseFloat(datosNumericos[0]);
+        float num2 = Float.parseFloat(datosNumericos[1]);
         
-        Suma suma = new Suma(num1, num2);
-        Multiplicacion multiplicar = new Multiplicacion(num1, num2);
+        Calculadora operaciones = new Calculadora(num1, num2);
         
-        
-        System.out.println(suma.sumar(num1, num2)+ " "+ multiplicar.multiplicar(num1, num2));
+        operaciones.suma(num1, num2);
+        System.out.print(" ");
+        operaciones.producto(num1, num2);
     }
 }
