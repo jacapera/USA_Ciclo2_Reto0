@@ -22,7 +22,7 @@ public class Reto0 {
         float num1 = Float.parseFloat(datosNumericos[0]);
         float num2 = Float.parseFloat(datosNumericos[1]);
         
-        Calculadora operaciones = new Calculadora(num1, num2);
+        Calculadora operaciones = new Calculadora();
         
         operaciones.suma(num1, num2);
         System.out.print(" ");
